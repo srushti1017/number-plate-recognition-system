@@ -1,0 +1,106 @@
+<script> 
+function lw()
+{
+var i = document.getElementById("in1").value
+var xhr = new XMLHttpRequest();
+
+xhr.open("GET", "http://192.168.43.47/cgi-bin/vehicle.py?x=" +i, true);
+xhr.send();
+xhr.onload = function(){
+var i = document.getElementById("in1").value
+var output = xhr.responseText;
+document.getElementById("d1").innerHTML = output;
+
+}
+}
+</script>
+
+<body>
+
+
+
+<i><b><h1 style="color: 420000">**WELCOME TO ANPR SYSTEM**</h1></b></i>
+
+<b><h2>
+
+<br/>
+<br/>
+
+Enter the car number :<input style="text-align: center" id = "in1" />
+
+</h2></b>
+
+<br/>
+<pre>
+<div style="text-align: center color:610000" id ="d1"> <h3> HERE IS THE INFORMATION OF VEHICLE </h3></div>
+</pre>
+<button onclick="lw()">SUBMIT</button>
+
+
+</html>
+
+<style>
+body{
+background-image: url('https://equinsaparking.com/wp-content/uploads/2018/01/GifGuiadoLogo.gif');
+background-color: #afeeee;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+
+h1{
+font-size: 50px; 
+text-shadow: 2px 2px 2px rgba(22,20,19,0.4); 
+color: #e0c7c5; 
+text-align: center;
+}
+
+h2{
+color:610000;
+text-align:center;
+-webkit-text-stroke:1px darkblue;
+font-size:250%;
+}
+
+.d1{
+color: white; 
+text-align:center;
+font-family:verdana;
+font-size:200%;
+background-image: linear-gradient(to left, rgba(255,0,0,0.14), rgba(255,0,0,0.75));
+}
+
+button{
+width: 170px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+color: white;
+font-size: 17px;
+border:1px solid #EFEEF5;
+font-weight: 500;
+background: 420000;
+background-color: black;
+border-radius: 20px;
+padding: 10px;
+cursor:pointer;
+transition: .3s;
+box-shadow:0 4px 8px 0 red, 0 4px 8px 0 red;
+}
+
+pre{
+text-align: center;
+font-family:verdana;
+background-color: skyblue;
+background-repeat: no-repeat;
+width: 700;
+height:190; 
+margin: 0 auto;
+border: 5px solid black;
+box-shadow:0 5px 9px 0 white, 0 5px 9px 0 white;
+}
+
+</style>
+
+
+</body>
